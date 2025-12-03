@@ -1,22 +1,46 @@
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rotto</title>
-    <link rel="stylesheet" href="style.css">
-    
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-    <ul id="container">
+    <h2>로또 번호 생성기</h2>
+    <main>
+        <section id="filterContainer">
+            <h3>번호 생성 조건 설정</h3>
+            <ul id="filterList">
+                <li>포함할 번호 선택 <button>선택</button></li>
+                <li>제외할 번호 선택 <button>선택</button></li>
+                <li>
+                    기간별 미출현 번호 제외
+                    <ul id="weekList">
+                        <button class="weekItem">5주</button>
+                        <button class="weekItem">10주</button>
+                        <button class="weekItem">15주</button>
+                    </ul>
+                </li>
 
-    </ul>
-    <button id="addBtn">번호 생성하기</button><button id="delBtn">초기화</button><br>
-    
-    <input id="missNum5" type="radio" name="missNum" checked/><label for="missNum5">5주간 미출현 번호 제외</label><br>
-    <input id="missNum10" type="radio" name="missNum"/><label for="missNum10">10주간 미출현 번호 제외</label><br>
-    <input id="missNum15"type="radio" name="missNum"/><label for="missNum15">15주간 미출현 번호 제외</label><br>
-    
+                <li>구간 분배 필터<button>설정</button></li>
+            </ul>
+            <button id="addBtn">로또 번호 생성</button>
+            <button id="delBtn">로또 번호 초기화</button>
+        </section>
+        <section id="listContanier">
+            <h3>생성된 번호</h3>
+            <ul>
+            </ul>   
+        </section>
+        <section id="historyContainer">
+            <h3>생성 내역</h3>
+            <hr>
+            <ul>
+                
+            </ul>
+        </section>
+    </main>
     <script src="app.js"></script>
 </body>
 </html>
