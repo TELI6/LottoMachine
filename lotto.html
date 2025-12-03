@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOTTO NUMBER GENERATOR</title>
+    <link rel="stylesheet" href="style/lotto.css"> 
+</head>
+<body>
+    <header><h2><a href="index.html">LOTTO NUMBER GENERATOR</a></h2></header>
+    <main>
+        <section id="filterContainer">
+            <h3>번호 생성 조건 설정</h3>
+            <ul id="filterList">
+                <li>
+                    기간별 미출현 번호 제외
+                    <ul id="weekList">
+                        <button class="weekItem">5주</button>
+                        <button class="weekItem">10주</button>
+                        <button class="weekItem">15주</button>
+                    </ul>
+                </li>
+            </ul>
+            <button id="addBtn">로또 번호 생성</button>
+            <button id="delBtn">로또 번호 초기화</button>
+        </section>
+        <section id="listContanier">
+            <h3>생성된 번호</h3>
+            <ul>
+            </ul>
+        </section>
+        <section id="historyContainer">
+            <h3>생성 내역</h3>
+            <hr>
+            <ul id="historyList">
+
+            </ul>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

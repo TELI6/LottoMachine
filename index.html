@@ -1,46 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css"> 
+    <title>LOTTO NUMBER GENERATOR</title>
+    <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
-    <h2>로또 번호 생성기</h2>
+    <header>
+        <h2>Welcome to the</h2>
+        <h1>Lotto Number Generator</h1>
+        <h2>더 합리적인 번호 선택을 위한 도구</h2>
+        <a href="lotto.html">바로 가기</a>
+    </header>
     <main>
-        <section id="filterContainer">
-            <h3>번호 생성 조건 설정</h3>
-            <ul id="filterList">
-                <li>포함할 번호 선택 <button>선택</button></li>
-                <li>제외할 번호 선택 <button>선택</button></li>
-                <li>
-                    기간별 미출현 번호 제외
-                    <ul id="weekList">
-                        <button class="weekItem">5주</button>
-                        <button class="weekItem">10주</button>
-                        <button class="weekItem">15주</button>
-                    </ul>
-                </li>
-
-                <li>구간 분배 필터<button>설정</button></li>
-            </ul>
-            <button id="addBtn">로또 번호 생성</button>
-            <button id="delBtn">로또 번호 초기화</button>
-        </section>
-        <section id="listContanier">
-            <h3>생성된 번호</h3>
-            <ul>
-            </ul>   
-        </section>
-        <section id="historyContainer">
-            <h3>생성 내역</h3>
-            <hr>
-            <ul>
-                
-            </ul>
-        </section>
+        <h2>사이트 기능 설명</h2>
+        <ul>
+            <li>최근 당첨 데이터 분석을 통한 번호 추천</li>
+            <li>번호 패턴, 출현 경향 기반 자동 필터링</li>
+            <li>중복 패턴 방지 필터 (연속 번호, 구간 편중, 홀짝 비율 반복 제거)</li>
+        </ul>
     </main>
-    <script src="app.js"></script>
+    <footer>
+        <div>
+            <p>제작자 : 20253435 박준형</p>
+            <p>email : vwayix@gmail.com</p>
+        </div>
+        <div>
+            <strong>! 이용 안내</strong>
+            <p>본 서비스는 통계 기반 번호 추천 도구이며, 
+            실제 당첨을 보장하지 않습니다.</p>
+        </div>
+        <div>
+            <p>GitHub : gitHub.com</p>
+            <p>Version : v0.0.1</p>
+        </div>
+
+    </footer>
 </body>
 </html>

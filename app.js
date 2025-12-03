@@ -6,16 +6,15 @@ addBtn.addEventListener("click", () => { // 클릭시 로또 번호 추천
     let listContainer = document.querySelector("#listContanier > ul");
     let historyContainer = document.querySelector("#historyContainer > ul");
     let ItemList = main();
-    listContainer.innerHTML += `<li>${round}회차 <ul>${ItemList}</ul></li>`;
+    listContainer.innerHTML = `<li>${round}회차 <ul>${ItemList}</ul></li>` + listContainer.innerHTML;
     let now = new Date();
     let day = `<span>${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()} ${now.getHours()}-${now.getMinutes()}-${now.getSeconds()}</span>`;
-    historyContainer.innerHTML += `<li><ul>${ItemList}</ul>${day}</li>`;
+    historyContainer.innerHTML = `<li>${round}회차 <ul>${ItemList}</ul>${day}</li>` + historyContainer.innerHTML;
     round++;
     init();
 });
-
 const delBtn = document.querySelector("#delBtn");
-delBtn.addEventListener('click', ()=>{  // 클릭시 로또 번호 초기화
+delBtn.addEventListener('click', ()=> {  // 클릭시 로또 번호 초기화
     let container = document.querySelector("#listContanier > ul");
     container.innerHTML = "";
     round = 1;
@@ -32,7 +31,7 @@ function main(){
     bubleSort();
     let list = "";
     for(let i=0; i < arr.length; i++){
-        list += `<li>${arr[i]}</li>`;
+        list += `<li class="${ballStyle(arr[i])}">${arr[i]}</li>`;
     }
     return list;
 }
@@ -80,7 +79,6 @@ function isSumInRange(min, max){ //범위 몇부터 몇까지
     return (sum >= min && sum <= max);
 }
 
-
 function bubleSort(){ //오름차순 정렬
     for(let i = 0; i < arr.length - 1; i++){
         for(let j = i + 1; j < arr.length; j++){
@@ -98,6 +96,7 @@ function init(){ // 배열 초기화
         arr.pop();
     }
 }
+
 let weekBtns = document.querySelectorAll(".weekItem");
 weekBtns.forEach((btn)=>{
     btn.addEventListener('click', ()=>{
@@ -105,6 +104,14 @@ weekBtns.forEach((btn)=>{
         btn.classList.add('active');
     })
 })
+
+function ballStyle(num){
+    if(num <= 10) return "yellow";
+    else if(num <= 20) return "skyblue";
+    else if(num <= 30) return "violet";
+    else if(num <= 40) return "gray";
+    else return "green"; 
+}
 
 // function sectionDistribution(){ // 구간 분배 필터
 
