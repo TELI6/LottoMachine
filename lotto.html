@@ -14,26 +14,43 @@
             <ul id="filterList">
                 <li>
                     기간별 미출현 번호 제외
-                    <ul id="weekList">
-                        <button class="weekItem">5주</button>
-                        <button class="weekItem">10주</button>
-                        <button class="weekItem">15주</button>
+                    <ul id="" class="List">
+                        <button class="Item">5주</button>
+                        <button class="Item">10주</button>
+                        <button class="Item">15주</button>
+                    </ul>
+                </li>
+                <li>
+                    홀짝 비율
+                    <ul id="oddEvenList">
+                        <button class="Item">2:4</button>
+                        <button class="Item">3:3</button>
+                        <button class="Item">4:2</button>
+                    </ul>
+                </li>
+                <li>
+                    구간 분배 필터
+                    <ul id="rangeList">
+                        <li><label for="one">1~10</label><input id="one" type="number" min="0" max="6" value="1">개</li>
+                        <li><label for="two">11~20</label><input id="two" type="number" min="0" max="6" value="1">개</li>
+                        <li><label for="three">21~30</label><input id="four" type="number" min="0" max="6" value="1">개</li>
+                        <li><label for="four">31~40</label><input id="four" type="number" min="0" max="6" value="1">개</li>
+                        <li><label for="five">41~45</label><input id="five" type="number" min="0" max="6" value="1">개</li>
                     </ul>
                 </li>
             </ul>
             <button id="addBtn">로또 번호 생성</button>
-            <button id="delBtn">로또 번호 초기화</button>
+            <button id="delBtn">초기화</button>
         </section>
         <section id="listContanier">
-            <h3>생성된 번호</h3>
-            <ul>
+            <h3>생성된 번호<button id="delBtn1">초기화</button></h3>
+            <ul id="lottoList">
             </ul>
         </section>
         <section id="historyContainer">
-            <h3>생성 내역</h3>
+            <h3>생성 내역<button id="delBtn2">초기화</button></h3>
             <hr>
             <ul id="historyList">
-
             </ul>
         </section>
     </main>

@@ -3,23 +3,27 @@ let arr = new Array();
 
 const addBtn = document.querySelector("#addBtn");
 addBtn.addEventListener("click", () => { // 클릭시 로또 번호 추천
-    let listContainer = document.querySelector("#listContanier > ul");
-    let historyContainer = document.querySelector("#historyContainer > ul");
+    const listContainer = document.querySelector("#lottoList");
+    const historyContainer = document.querySelector("#historyList");
     let ItemList = main();
-    listContainer.innerHTML = `<li>${round}회차 <ul>${ItemList}</ul></li>` + listContainer.innerHTML;
+    listContainer.innerHTML = `<li>${round}회차 <ul id="balls">${ItemList}</ul></li>` + listContainer.innerHTML;
     let now = new Date();
     let day = `<span>${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()} ${now.getHours()}-${now.getMinutes()}-${now.getSeconds()}</span>`;
-    historyContainer.innerHTML = `<li>${round}회차 <ul>${ItemList}</ul>${day}</li>` + historyContainer.innerHTML;
+    historyContainer.innerHTML = `<li>${round}회차 <ul id="hisBalls">${ItemList}</ul>${day}</li>` + historyContainer.innerHTML;
     round++;
     init();
 });
-const delBtn = document.querySelector("#delBtn");
-delBtn.addEventListener('click', ()=> {  // 클릭시 로또 번호 초기화
-    let container = document.querySelector("#listContanier > ul");
+const delBtn1 = document.querySelector("#delBtn1");
+const delBtn2 = document.querySelector("#delBtn2");
+delBtn1.addEventListener('click', ()=> {  // 클릭시 로또 번호 초기화
+    let container = document.querySelector("#lottoList");
     container.innerHTML = "";
     round = 1;
 })
-
+delBtn2.addEventListener('click', ()=>{
+    let container = document.querySelector("#historyList");
+    container.innerHTML = "";
+});
 function main(){
     do{
         init();
