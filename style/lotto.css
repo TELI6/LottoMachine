@@ -26,18 +26,19 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 25px auto;
     margin-bottom: 20px;
     padding: 20px;
     font-weight: bold;
+    gap: 10px;
     border-radius: 5px;
     box-shadow: 0 0 2px rgba(0, 0, 0, 1);
     font-size : 20px;
 }
-#weekList, #oddEvenList{
+#weekList, #oddEvenList, #rangeList{
     display: flex;
     margin-top: 10px;
     justify-content: center;
+    text-align: center;
     width: 100%;
     gap: 10px;
 }
@@ -94,6 +95,8 @@ section h3{
     scrollbar-gutter: stable;
     height: 680px;
     border-radius: 5px;
+    padding: 1px;
+    list-style: none;
 }
 .box{
    -ms-overflow-style: none;
@@ -104,10 +107,10 @@ section h3{
 #lottoList > li{
     font-weight: bold;
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 19px;
     border-radius: 5px;
     height: auto;
-    background-color: rgb(209, 209, 209);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 1);
 }
 #balls{
     padding: 15px;
@@ -189,4 +192,16 @@ a{
 }
 .skyblue, .yellow, .violet, .gray, .green{
     color: white;
+}
+#rangeList > li{
+    list-style: none;
+}
+#one, #two, #three, #four, #five{
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    font-size: 16px;
+    padding: 8px 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
 }
