@@ -1,9 +1,5 @@
 <!-- 
     기능 모듈화
-    main rename AddBalls
-    isAdd rename Deduplication
-
-    function BallItems, hisItems
     function CreationConditions > OddEven, isSumInRange
     function NumFilter > Deduplication, missByWeeks
 

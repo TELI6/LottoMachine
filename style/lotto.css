@@ -34,20 +34,12 @@ main{
     box-shadow: 0 0 2px rgba(0, 0, 0, 1);
     font-size : 20px;
 }
-#weekList{
+#weekList, #oddEvenList{
     display: flex;
     margin-top: 10px;
     justify-content: center;
     width: 100%;
     gap: 10px;
-}
-.weekItem{
-    width: 150px;
-    height: 50px;
-    text-align: center;
-    line-height: 40px;
-    border-right: 1px solid gray;
-    cursor: pointer;
 }
 .weekItem:hover{
     background-color: rgb(0, 68, 196);
@@ -61,8 +53,8 @@ main{
     background-color: rgb(0, 89, 255);
     color: white;
 }
-#weekList > button{
-    width: 100%;
+#weekList > button, #oddEvenList > button{
+    width: 100px;
     height: 50px;
     text-align: center;
     display: inline-block;
