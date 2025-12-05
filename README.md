@@ -1,10 +1,9 @@
 <!-- 
     기능 모듈화
     function CreationConditions > OddEven, isSumInRange
-    function NumFilter > Deduplication, missByWeeks
+    function NumFilter > Deduplication, missByWeeks, SectionDistribution
 
     function SectionDistribution // 구간 분배 필터 생성
-    CreationConditions > SectionDistribution
  -->
 
 
